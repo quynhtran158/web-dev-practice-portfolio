@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width= , initial-scale=1.0" />
     <title>My Meipaly</title>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,13 +17,13 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <>
     <header>
       <div class="container header-container">
         <span class="logo"> Meipaly</span>
         <nav>
           <!-- the nav la block tai no chiem nguyen mot hang -->
-          <a href="#">Home</a>
+          <a class="active" href="#">Home</a>
           <a href="#">Service</a>
           <a href="#">Showcase</a>
           <a href="#">Blog</a>
@@ -36,11 +40,47 @@
         <button>Read more</button>
       </div>
     </section>
-    <section class="carousel"></section>
+    <section class="carousel">
+      <div class="your-class">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+      </div>
+    </section>
     <section class="blogs"></section>
     <section class="number"></section>
     <section class="experience"></section>
     <section class="contact"></section>
-    <footer></footer>
+    <footer></footer> 
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- slick -->
+    <script src="./slick-1.8.1/slick/slick.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".your-class").slick({
+          // setting-name: setting-value
+          infinite: true,
+          slidesToShow: 5,
+          slidesToShow: 3,
+        });
+      });
+    </script>
   </body>
 </html>
