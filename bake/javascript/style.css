@@ -1,0 +1,204 @@
+/* GLOBAL - cho toan bo website */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* giup khi them padding thi kich thuoc tag khong bi vuot qua size tag ben ngoai. Tranh tinh trang rot xuong hang */
+}
+
+/* cho nay khai font-sz de sau nay neu co doi sz tat ca cac chu cho to len thi co the chinh dong loat duoc. Code khong dung don vi px nua ma dung rem (de chinh dong loat sz) */
+html{
+    font-size: 18px;
+    /* o day khai font-size: 16px thi 
+    1 rem = 18px */
+    /* mac dinh la 16px */
+}
+
+
+/* the body thuong dung de khai bao cac thuoc tinh chung
+- mau chu
+- mau nen
+- font family
+- khoang cach cac chu */
+
+/* letter-spacing: khoang cach giua cac ki tu trong 1 chu
+word-spacing: khoang cach giua cac chu */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #212529;
+    background-color: white;
+    letter-spacing: 1px ;
+}
+
+header{
+    background-color: #4e2a84;
+    padding: 20px 0;
+}
+
+/* cho width nhỏ hơn 100% (vd 70% xong dùng marign: 0 auto để nó căn giữa. 30% còn lại nó sẽ chia đôi trái phải 15% rồi canh giữa cái div */
+/* flex: them o the cha  */
+.header-content{
+width: 80%;
+margin: 0 auto;
+display: flex;
+justify-content: space-around;
+align-items: center; 
+}
+
+.header-content p{
+    color: #fff;
+    font-size:  2.3rem;
+}
+/* de xoa may cai gach dau dong cua ul: list-style*/
+.header-content ul{
+list-style: none;
+}
+
+.header-content ul li{
+    display: inline;
+    margin: 0 1rem;
+}
+
+/* xoa dau gach duoi cua nav button */
+.header-content ul a{
+text-decoration: none;
+color: white;
+font-weight: 700;
+letter-spacing: 2px;
+font-size: 0.75rem;
+/* transition-property: all ;
+transition-duration: 1s;
+transition-timing-function: linear; */
+transition: all 0.3s; 
+}
+
+.header-content ul a:hover{
+    color: #ff0e83;
+    /* neu de transition o trong hover tag thi hieu ung 1 chieu */
+}
+
+.header-content ul .active a {
+    color:#ff0e83;
+}
+
+/* BANNER */
+.banner{
+    background-image: url("../img/b3.jpg");
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner-content button{
+    background-color: #ff0e83;
+   padding: 13px 32px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.banner-content h1{
+    margin-bottom: 20px;
+}
+
+.banner-content p{
+    margin-bottom: 20px;
+}
+/* INTRO */
+.intro{
+    display: grid;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* grid-template-columns: repeat(4,25%); */
+    /* fr: phan so 
+    moi column co kich thuoc 1/4*/
+    grid-template-columns: repeat(4,1fr);
+   
+
+}
+.intro-item{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.intro-text{
+    padding: 0 32px;
+}
+.intro-item:first-child{
+    background-color: #4e2a84;
+}
+
+.intro-item:nth-child(3){
+    background-color: #ff0d83;
+}
+
+.intro-item:nth-child(4){
+    background-color: #ec6498;
+}
+.intro-item:nth-child(6){
+    background-color: #836faa;
+}
+.intro-item:nth-child(8){
+    background-color: #4e2a84;
+}
+
+.intro-item h3{
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: 700;  
+    margin-bottom: 16px;
+}
+.intro-item p{
+    color: #c1c1c1;
+    font-size: 0.875rem; 
+    line-height: 29px;
+
+}
+ 
+.intro-item img{
+    width: 100%;
+    display: block;
+     
+}
+
+.grid1{
+    /*   so line bat dau va line ket thuc, so cot ma item chiem trong html */
+    /* gom cot */
+    /* grid-column: 2 / 4; */
+    grid-column: 2 / span 2;
+}
+
+.intro-bake{
+    /* 1 / 3 */
+    grid-column: 1/ span 2;
+     
+}
+
+.grid4{
+    /* 3 / 5 */
+    grid-column: 3 / span 2;
+}
+
+/* stats */
+.stats{
+    padding: 70px 0;
+}
+.stats-content{
+    width: 70%;
+    margin: 0 auto;
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+
+}
