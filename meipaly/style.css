@@ -2,6 +2,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* header {
+  display: flex;
+  justify-content: center;
+} */
+
+/* neu 90% gia tri thuc te < 75rem => lay 90% */
+/* neu 90% gia tri thuc te > 75rem => lay 75rem */
+.container {
+  width: 80%;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 /* flex: de dua cai block nav len chung hang voi cai logo */
@@ -10,9 +28,20 @@
 /* mac dinh truc chinh la truc ngang. Truc chinh: justify-content */
 /* truc phu la truc doc. Truc ngang: align-items */
 .header-container {
-  height: 80px;
+  height: 5rem;
   border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 0.625rem;
+}
+
+header .logo {
+  font-size: 1.875rem;
+  font-weight: 500;
 }
