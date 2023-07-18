@@ -22,6 +22,13 @@ html {
   margin: 0 auto;
 }
 
+/*  */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 /* flex: de dua cai block nav len chung hang voi cai logo */
 /* flex cho the cha */
 
@@ -29,7 +36,6 @@ html {
 /* truc phu la truc doc. Truc ngang: align-items */
 .header-container {
   height: 5rem;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,9 +45,59 @@ header a {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 0.625rem;
+  font-size: 1.2rem;
+  color: white;
 }
 
 header .logo {
   font-size: 1.875rem;
   font-weight: 500;
 }
+
+/* banner starts */
+.banner {
+  text-transform: uppercase;
+  height: 80vh;
+  min-height: 31.25rem;
+  background-image: url(./image-video/home_slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-container {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.banner-container * {
+  margin-top: 2.2rem;
+}
+
+.banner-container h2 {
+  font-size: 4.7rem;
+}
+.banner-container p {
+  font-size: 5.7em;
+}
+
+.banner-container button {
+  padding: 2rem 3.5rem;
+  background-color: #e62b4a;
+  color: white;
+  font-size: 2rem;
+  border: none;
+}
+
+.banner-container button:hover {
+  cursor: pointer;
+  background-color: #af2239;
+  border: none;
+  transition: 0.5s;
+}
+
+/* slick js */
