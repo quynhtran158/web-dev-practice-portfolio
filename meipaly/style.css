@@ -273,6 +273,7 @@ header .logo {
   grid-column: 3/5;
   grid-row: 3/5;
 }
+/* overlay item */
 /* khi hover blog-item thi dung blog-search */
 .blog-item:hover .blog-search {
   top: 1.5rem;
@@ -285,6 +286,7 @@ header .logo {
 .blog-item:hover .blog-overlay {
   opacity: 1;
 }
+
 .blog-overlay {
   position: absolute;
   width: 100%;
@@ -323,4 +325,35 @@ header .logo {
   display: block;
 }
 
-/* overlay item */
+/* contact starts */
+.contact-container {
+  display: flex;
+  height: 25rem;
+}
+.contact-map {
+  width: 60%;
+  height: 100%;
+}
+
+.contact-map iframe {
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  width: 40%;
+  height: 100%;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1.15rem;
+}
+.contact-form * {
+  padding: 1.15rem;
+}
+
+.contact-form textarea {
+  height: 40%;
+}
