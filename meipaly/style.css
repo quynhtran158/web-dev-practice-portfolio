@@ -250,4 +250,77 @@ header .logo {
 .stats-container {
   display: flex;
   justify-content: space-around;
+  gap: 1.25rem;
 }
+
+/* blog starts */
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.blog-item {
+  position: relative;
+}
+
+.blog-container .blog-item:first-child {
+  grid-column: 1/3; /*o nay bat dau tu line 1 den line 3 trong cai cot*/
+  grid-row: 1/3;
+}
+
+.blog-container .blog-item:nth-child(2) {
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+/* khi hover blog-item thi dung blog-search */
+.blog-item:hover .blog-search {
+  top: 1.5rem;
+}
+
+.blog-item:hover .blog-logo {
+  bottom: 1rem;
+}
+
+.blog-item:hover .blog-overlay {
+  opacity: 1;
+}
+.blog-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 10rem;
+  left: 0;
+  background: rgba(230, 43, 74, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.blog-search {
+  position: absolute;
+  top: 3.75rem;
+  right: 2rem;
+  width: 3.125rem;
+  height: 3.125em;
+  background: white;
+  color: #000;
+  text-align: center;
+  line-height: 3.125rem;
+}
+
+.blog-logo {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 2rem;
+  transition: 0.3s;
+}
+
+.blog-item img {
+  width: 100%;
+  filter: grayscale(50%) contrast(50%);
+  display: block;
+}
+
+/* overlay item */
