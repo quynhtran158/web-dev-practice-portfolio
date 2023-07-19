@@ -239,3 +239,15 @@ header .logo {
 } */
 
 /* counting number using jquery  */
+.stats {
+  padding: 5rem 0;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* waypoints cdn */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+}

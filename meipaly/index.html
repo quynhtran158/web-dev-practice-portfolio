@@ -135,26 +135,25 @@
     <section class="blogs">
       <!-- Add your content for the "blogs" section here -->
     </section>
-
-    <section class="number">
-      <div class="item">
-        <p class="number">8,705</p>
-        <h2 class="title">PROJECTS COMPLETED</h2>
-      </div>
-
-      <div class="item">
-        <p class="number">480</p>
-        <h2 class="title">ACTIVE CLIENTS</h2>
-      </div>
-
-      <div class="item">
-        <p class="number">625</p>
-        <h2 class="title">CUPS OF COFFEE</h2>
-      </div>
-
-      <div class="item">
-        <p class="number">9,774</p>
-        <h2 class="title">HAPPY CLIENTS</h2>
+    <!-- justify content -->
+    <section class="stats">
+      <div class="container stats-container">
+        <div class="stats-item">
+          <p class="stats-number">8,705</p>
+          <h2 class="stats-title">PROJECTS COMPLETED</h2>
+        </div>
+        <div class="stats-item">
+          <p class="stats-number">480</p>
+          <h2 class="stats-title">ACTIVE CLIENTS</h2>
+        </div>
+        <div class="stats-item">
+          <p class="stats-number">625</p>
+          <h2 class="stats-title">CUPS OF COFFEE</h2>
+        </div>
+        <div class="stats-item">
+          <p class="stats-number">9,774</p>
+          <h2 class="stats-title">HAPPY CLIENTS</h2>
+        </div>
       </div>
     </section>
 
@@ -195,6 +194,19 @@
           dots: true,
         });
       });
+    </script>
+    <!-- counting up number -->
+    <!-- waypoints -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+      integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- countup.js -->
+    <script src="./Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
+    <script>
+      $(".stats-number").countUp();
     </script>
   </body>
 </html>
