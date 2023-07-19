@@ -116,10 +116,10 @@ header .logo {
 }
 
 .carousel-item {
-  padding: 1rem;
+  padding: 0 1rem;
   text-align: center;
 }
-
+/* code don gian, dung position */
 .carousel-item .item-container {
   height: 16rem;
   display: flex;
@@ -152,6 +152,36 @@ header .logo {
   /* transition: 0.3s; */
 }
 
+/* dung transition */
+.carousel-item .item-container {
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+  color: #848482;
+  position: relative;
+  overflow: hidden;
+}
+/* dung transition */
+.carousel-item .item-container::before {
+  content: "";
+  display: "block";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transform: translateY(-100%);
+  width: 5px;
+  background: #e62b4a;
+  transition: 0.3s;
+}
+
+/* dung transition */
+.item-container:hover::before {
+  transform: translateY(0);
+}
 .carousel-item p {
   text-transform: uppercase;
 }
