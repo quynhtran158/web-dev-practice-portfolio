@@ -120,6 +120,26 @@ header .logo {
   background: white;
   color: #848482;
 }
+/* code don gian, dung position */
+.carousel-item .item-container::before {
+  content: ""; /*khong chen content bang css*/
+  display: "block";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0%;
+  width: 5px;
+  background: #e62b4a;
+  transition: 0.3s;
+}
+
+/* code don gian dung position */
+.carousel-item .item-container:hover::before {
+  background: #e62b4a;
+  height: 100%;
+  cursor: pointer;
+  /* transition: 0.3s; */
+}
 
 .carousel-item p {
   text-transform: uppercase;
