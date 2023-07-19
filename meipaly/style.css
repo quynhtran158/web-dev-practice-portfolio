@@ -72,6 +72,12 @@ header .logo {
   text-transform: uppercase;
   color: white;
   text-align: center;
+  position: relative;
+}
+.button-container {
+  display: flex; /* Use flexbox to center the button and arrow vertically */
+  flex-direction: column;
+  align-items: center;
 }
 
 .banner-container * {
@@ -91,6 +97,7 @@ header .logo {
   color: white;
   font-size: 2rem;
   border: none;
+  margin-bottom: 1rem;
 }
 
 .banner-container button:hover {
@@ -103,8 +110,8 @@ header .logo {
 .banner-container i {
   font-size: 2.5rem;
   color: #e62b4a;
-  /* animation-name: animate-arrow; */
-  animation-name: animate-color;
+  animation-name: animate-arrow;
+  /* animation-name: animate-color; */
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -198,23 +205,28 @@ header .logo {
   font-size: 1rem;
   color: #848482;
   opacity: 1;
+  line-height: 10;
 }
 
+.slick-dots ul {
+  margin: 10rem;
+}
 /* animate @keyframes */
 @keyframes animate-arrow {
   form {
     opacity: 1;
-    transform: translateY(0) translateX(-50px) scale(0.5);
+    transform: translateY(-50%) scale(0.5);
   }
 
   to {
     opacity: 0;
-    transform: translateY(100px) translateX(150px) scale(2);
+    transform: translateY(50%) scale(2);
   }
 }
 
-@keyframes animate-color {
+/* @keyframes animate-color {
   0% {
+  
     color: yellow;
     transform: scale(0.1) rotate(0deg);
   }
@@ -224,6 +236,6 @@ header .logo {
   100% {
     color: blue;
   }
-}
+} */
 
 /* counting number using jquery  */
