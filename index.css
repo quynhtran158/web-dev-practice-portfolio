@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* header starts */
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header .nav-link,
+.navbar-brand {
+  color: #fff;
+  position: relative;
+}
+
+header .active .nav-link {
+  color: #35a22c;
+}
+
+/** viet rieng nhu nay hoac gop chung nhu cai o duoi
+header .active .nav-link::after {
+  width: 100%;
+}
+*/
+
+header .nav-link::after {
+  content: "";
+  position: absolute;
+  background: #35a22c;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  /* de transition trong item de transition muot hon */
+  transition: 0.3s;
+
+  /** neu muon lam cho cai gach chan xanh bu hon chu about
+left: 50%; de canh giua cai gach chan. Nhung ma no van se khong nam o giua dau
+translateX(-50%); neu dung left khong thi no van bi chenh, tai vi cai area cua gach chan no knong canh giua ma canh theo vien 
+
+
+
+  */
+}
+
+header .nav-link:hover::after,
+.active .nav-link::after {
+  width: 100%;
+  /** neu de transition trong hover thi sau khi hover button bi giat
+   transition: 0.3s; */
+  /**
+   width:135.5%; de lam cho cai thanh gach chan xanh bu hon chu about
+     
+   */
+}
+
+/**
+sua tren html voi bootstrap
+
+ header .nav-item {
+  margin-left: 20px;
+} 
+*/
+
+/* carousel starst */
+/* bs co san position relative cho cai item r */
+.carousel-item::before {
+  content: "";
+  display: block; /*co cung duoc, khong co khong sao*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover; /*ben html la background size: cover*/
+}
+.carousel-caption {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.carousel-caption img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.carousel-indicators li {
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  height: 30px;
+  background-color: #35a22c;
+  border-radius: 50%;
+}
+
+/* projects starts */
+.pj-tabs .nav {
+  justify-content: center;
+}
+
+.nav-pills .nav-link.active {
+  background: #35a22c;
+  border: none;
+}
+
+.nav-pills .nav-link {
+  border: 1px solid #000;
+  color: #000;
+  margin: 0 10px;
+}
+
+.pj-tabs .col-4 {
+  padding: 25px 15px;
+}
+
+.pj-tabs .card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border: none;
+}
+
+.pj-tabs .card-body {
+  /* neu khong them cai nay thi border bi giat */
+  border: 1px solid transparent;
+  transition: 0.3s;
+  border-top: none;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.pj-tabs .card-body:hover {
+  border: 1px solid #35a22c;
+  /* cai cho cong khong hien border nen phai lam 2 dong nay */
+
+  border-top: none;
+}
+
+.pj-tabs .card-body:hover h4 {
+  color: #35a22c;
+}
+
+/* breakpoint bs4 */
+/*responsive*/
+#footer {
+  height: 300px;
+  width: 100%;
+  background: #000;
+}
+
+/*min, max*/
+/*mobile 1st va destop first*/
+@media screen and (max-width: 992px) {
+  #footer {
+    background: red;
+  }
+}
+
+#footer2 {
+  height: 200px;
+  background: purple;
+}
+
+@media screen and (min-width: 992px) {
+  #footer2 {
+    background: blue;
+  }
+}
