@@ -355,5 +355,5 @@ header .logo {
 }
 
 .contact-form textarea {
-  height: 40%;
+  height: 40%; /*text area chiem 40% height của contact-form*/
 }
